@@ -171,3 +171,58 @@
 //        }
 //    }
 //}
+
+////724 Find Pivot Index
+
+//wrong
+
+//int[] input = new int[6] { 1, 7, 3, 6, 5, 6 };
+//int LeftSum = 0;
+//int RightSum = 0;
+//int[] leftSum_Array = new int[6];
+//int[] RightSum_Array = new int[6];
+//for ( int s = 0; s < input.Length; s++)
+//{
+//    LeftSum = +input[s];
+//    leftSum_Array[s] = LeftSum;
+//    RightSum = +input[input.Length - s];
+//    RightSum_Array[s] = RightSum;
+//}
+
+//for( int i = 0; i < input.Length; i++)
+//{
+//    for( int j = 0; j < input.Length; j++)
+//    {
+//        if(leftSum_Array[i] == RightSum_Array[j])
+//        {
+
+//        }
+//    }
+//}
+
+//correct
+
+//int[] num = new int[6] { 1, 7, 3, 6, 5, 6 };
+//int LeftSum = 0;
+//int RightSum = 0;
+//for (int s = 0; s < num.Length; s++)
+//{
+//    RightSum = num.Sum() - num[s] - LeftSum;
+//    if( LeftSum == RightSum)
+//    {
+
+//    }
+//    LeftSum = +num[s];
+//}
+
+//Solution solution = new Solution();
+//Console.WriteLine(solution.PivotIndex(num));
+
+//226.Invert Binary Tree
+//int[] nums;
+//int[] output = new int[nums.Length];
+//output[0] = nums[0];
+//for (int s = 1; s <  nums.Length; s++)
+//{
+//    output[s] = output[s - 1] + nums[s];
+//}
