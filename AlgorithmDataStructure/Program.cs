@@ -215,7 +215,8 @@
 //    LeftSum = +num[s];
 //}
 
-//Solution solution = new Solution();
+Solution solution = new Solution();
+
 //Console.WriteLine(solution.PivotIndex(num));
 
 //226.Invert Binary Tree
@@ -226,3 +227,5 @@
 //{
 //    output[s] = output[s - 1] + nums[s];
 //}
+
+Console.WriteLine(solution.IsIsomorphic("badc", "baba"));
