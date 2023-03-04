@@ -228,4 +228,9 @@ Solution solution = new Solution();
 //    output[s] = output[s - 1] + nums[s];
 //}
 
-Console.WriteLine(solution.IsIsomorphic("badc", "baba"));
+//Console.WriteLine(solution.IsIsomorphic("badc", "baba"));
+
+Console.WriteLine(solution.IsSubsequence("abc", "ahbgdc"));
+
+
+Console.ReadLine();

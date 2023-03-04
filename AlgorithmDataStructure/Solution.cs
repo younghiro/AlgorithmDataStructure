@@ -3,6 +3,16 @@ using System;
 
 namespace AlgorithmDataStructure
 {
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
+    }
     public class Solution
     {
         //public TreeNode InvertTree(TreeNode root)
@@ -55,6 +65,47 @@ namespace AlgorithmDataStructure
         //    }
         //    return true;
         //}
+
+        //public bool IsSubsequence(string s, string t)
+        //{
+        //    string initialvalue = s;
+        //    string result = "";
+
+        //    foreach( char a in t)
+        //    {
+        //        if ( s !=  "" && s[0] == a)
+        //        {
+        //            result += s[0];
+        //            s = s.Remove(0, 1);
+        //        }
+        //    }
+
+        //    return result == initialvalue;
+        //}
+
+        public ListNode MergeTwoLists(ListNode list1, ListNode list2)
+        {
+            if (list1 is null) return list2;
+            if (list2 is null) return list1;
+
+            ListNode list3 = new ListNode();
+
+            while( list1 is not null && list2 is not null)
+            {
+                if( list1.val < list2.val)
+                {
+                    list3.val = list1.val;
+                    list1 = list1.next;
+                    list3.next = MergeTwoLists();
+                }
+                if (list1.val > list2.val)
+                {
+                    list3.val = list2.val;
+                    list2 = list2.next;
+                    list3.next = MergeTwoLists();
+                }
+            }
+        }
     }
 }
 
